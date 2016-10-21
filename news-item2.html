@@ -1,0 +1,217 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <link rel="canonical" href="<%host%>/components/amp-sidebar/">
+
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script> 
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+  <style amp-custom>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; } body {line-height: 1; } ol, ul {list-style: none; } blockquote, q {quotes: none; } blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; } table {border-collapse: collapse; border-spacing: 0; } 
+    body {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 26px;
+    }
+    .wrapper {
+      max-width: 750px;
+      min-width: 375px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+    amp-sidebar {
+      width: 466px;
+      padding-right: 10px;
+    }
+    .header {
+      height: 121px;
+      border-bottom: 1px solid #D8D8D8;
+    }
+    .header__inner {
+      position: relative;
+      text-align: center;
+      padding-top: 24px;
+    }
+    .header__sidebar-btn {
+      position: absolute;
+      top: 46px;
+      left: 32px;
+      width: 40px;
+      height: 30px;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background: url(i/icon-burger.png) no-repeat;
+      cursor: pointer;
+    }
+    .header__sidebar-btn:active,
+    .header__sidebar-btn:focus {
+      outline: 0;s
+    }
+    .header__logo {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .news__intro {
+      font-size: 13px;
+      line-height: 1.538em;
+    }
+    .news__rubric {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 36px;
+      line-height: 1.333em;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 45px;
+    }
+    .news__section {
+      text-align: center;
+      padding: 0 32px;
+    }
+    .news__date {
+      font-size: 26px;
+      line-height: 31px;
+      color: #888;
+      letter-spacing: .2px;
+      margin-bottom: 16px;
+    }
+    .news__title {
+      font-family: Georgia, serif;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 50px;
+    }
+    .news__intro {
+      font-size: 26px;
+      line-height: 40px;
+      letter-spacing: .37px;
+      margin-top: 31px;
+    }
+    .news__text {
+      font-size: 26px;
+      line-height: 40px;
+      letter-spacing: .37px;
+      text-align: left;
+      margin-top: 36px;
+    }
+    .news__img {
+      margin-top: 35px;
+    }
+    .news__bot {
+      padding: 90px 0;
+      text-align: center;
+    }
+    .news__back {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 26px;
+      line-height: 31px;
+      color: #000;
+      text-decoration: underline;
+    }
+    .footer {
+      background: #F9F9F9;
+      padding: 75px 32px 33px;
+      text-align: center;
+    }
+    .footer__inner {
+
+    }
+    .footer__call {
+      display: block;
+      border: 1px solid #989898;
+      text-align: center;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: .8px;
+      color: #888;
+      padding: 25px 0 22px;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+    .footer__call-number {
+      display: block;
+      font-size: 34px;
+      line-height: 39px;
+      letter-spacing: .6px;
+      color: #000;
+      margin-top: 15px;
+    }
+    .footer__copyright {
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: .8px;
+      color: #888;
+      margin-top: 72px;
+    }
+
+   li {
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  button {
+    margin-left: 20px;
+  }
+</style>
+
+</head>
+<body>
+  <div class="wrapper">
+    <amp-sidebar id='sidebar' layout="nodisplay" side="left">
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </amp-sidebar>
+
+    <header class="header">
+      <div class="header__inner">
+        <button on='tap:sidebar.open' class="header__sidebar-btn"></button>
+        <a href="#" class="header__logo"><amp-img src="i/logo.png" layout="fixed" width="164" height="74" alt="ЦУМ"></amp-img></a>
+      </div>
+    </header>
+
+    <div class="news">
+      <h3 class="news__rubric">Новости и события</h3>
+      <section class="news__section">
+        <div class="news__date">2 марта 2016</div>
+        <h1 class="news__title">GIVENCHY СОЗДАЕТ ИДЕАЛЬНОЕ ПАЛЬТО</h1>
+        <p class="news__intro">
+          Givenchy задает тренды в индустрии моды. Неповторимые силуэты, уникальные принты
+          и безупречный крой являются фирменными характеристиками узнаваемого стиля бренда. Сегодня мы представляем вам новинку — пальто
+          из благородного кашемира.
+        </p>
+        <div class="news__img">
+          <amp-img src="i/news-img-1.jpg" layout="responsive" width="686" height="480" alt=""></amp-img>
+        </div>
+        <div class="news__img">
+          <amp-img src="i/news-img-2.jpg" layout="responsive" width="686" height="363" alt=""></amp-img>
+        </div>
+        <p class="news__text">
+          Ни для кого не секрет, что Givenchy задает тренды в индустрии моды. Неповторимые силуэты, уникальные принты и безупречный крой являются фирменными характеристиками узнаваемого стиля бренда. Сегодня мы представляем вам новинку — пальто из кашемира.
+        </p> 
+        <p class="news__text">
+          Ни для кого не секрет, что Givenchy задает тренды в индустрии моды. Неповторимые силуэты, уникальные принты и безупречный крой являются фирменными характеристиками узнаваемого стиля бренда. Сегодня мы представляем вам новинку — пальто из кашемира.
+        </p>
+        <div class="news__bot">
+          <a href="#" class="news__back">Перейти к списку новостей</a>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <a href="tel:88005008000" class="footer__call">
+          Для звонков по России (бесплатный номер)
+          <span class="footer__call-number">8 800 500 80 00</span>
+        </a>
+        <div class="footer__copyright">© 2016 Торговый дом ЦУМ</div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
